@@ -1,0 +1,13 @@
+com\cognizant\medicinestock\feignclient\AuthenticationFeignClient.class
+com\cognizant\medicinestock\service\MedicineStockService.class
+com\cognizant\medicinestock\model\JwtResponse.class
+com\cognizant\medicinestock\controller\MedicineStockController.class
+com\cognizant\medicinestock\MedicineStockMicroServiceApplication.class
+com\cognizant\medicinestock\exception\TokenValidationFailedException.class
+com\cognizant\medicinestock\repository\MedicineStockRepository.class
+com\cognizant\medicinestock\model\ErrorResponse.class
+com\cognizant\medicinestock\exception\GlobalErrorHandler.class
+com\cognizant\medicinestock\exception\MedicineNotFoundException.class
+com\cognizant\medicinestock\model\MedicineStock.class
+com\cognizant\medicinestock\exception\TreatingAilmentNotFoundException.class
+com\cognizant\medicinestock\service\MedicineStockServiceImpl.class
