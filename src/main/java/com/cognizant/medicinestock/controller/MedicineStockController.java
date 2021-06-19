@@ -32,12 +32,6 @@ public class MedicineStockController {
 	@Autowired
 	private MedicineStockServiceImpl medicineStockService;
 
-//	@GetMapping("/medicine-stock-information")
-//	public List<MedicineStock> getMedicineDetails() {
-//		log.info("Start of the getMedicineDetails Functions");
-//		return medicineStockService.getMedicineStockInformation();
-//	}
-
 	@GetMapping("/medicine-stock-information")
 	public ResponseEntity<?> getMedicineDetails(@RequestHeader(name = "Authorization") String token) {
 		log.info("Start of the getMedicineDetails Functions");
@@ -88,12 +82,6 @@ public class MedicineStockController {
 
 	}
 
-//	@GetMapping("/medicine-stock-byAilment/{treatingAilment}")
-//	public List<MedicineStock> getMedicineByTreatingAilment(@PathVariable("treatingAilment") String treatingAilment) {
-//		log.info("Start of the getMedicineDetails Functions");
-//		return medicineStockService.getMedicineByTargetAilment(treatingAilment);
-//	}
-
 	@PostMapping("/medicine-stockcount-byName/{medicineName}")
 	public ResponseEntity<?> getNumberOfTabletsInStockByName(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("medicineName") String medicine) {
@@ -112,12 +100,6 @@ public class MedicineStockController {
 		log.info("END");
 		return new ResponseEntity<>(medicineStock, HttpStatus.OK);
 	}
-
-//	@GetMapping("/medicine-stockcount-byName/{medicineName}")
-//	public MedicineStock getStockCountForMedicine(@PathVariable("medicineName") String medicineName) {
-//		log.info("Start of the getMedicineDetails Functions");
-//		return medicineStockService.getNumberOfTabletsInStockByName(medicineName);
-//	}
 
 	@PostMapping("/update-stock/{medicineName}/{count}")
 	public Boolean updateNumberOfTabletsInStockByName(@RequestHeader(name = "Authorization") String token,
@@ -140,9 +122,8 @@ public class MedicineStockController {
 
 	}
 
-//	@GetMapping("/update-stock/{medicineName}/{count}")
-//	public Boolean updateNumberOfTabletsInStockByName(@PathVariable("medicineName") String medicineName,
-//			@PathVariable("count") int count) {
-//		return medicineStockService.updateNumberOfTabletsInStockByName(medicineName, count);
-//	}
+	@GetMapping("/test-stock")
+	public String updateNumberOfTabletsInStockByName() {
+		return "Hello Medicine Stock MicroService is Up and running";
+	}
 }
