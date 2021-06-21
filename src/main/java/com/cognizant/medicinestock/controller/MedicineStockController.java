@@ -124,6 +124,6 @@ public class MedicineStockController {
 
 	@GetMapping("/test-stock")
 	public String updateNumberOfTabletsInStockByName() {
-		return "Hello Medicine Stock MicroService is Up and running";
+		return "{'Status':'UP'}";
 	}
 }
